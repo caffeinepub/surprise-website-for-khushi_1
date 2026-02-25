@@ -1,0 +1,84 @@
+{
+  "kind": "build_request",
+  "title": "Add Secret Surprise countdown timer with poem reveal page",
+  "projectName": "Surprise for Khushi",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add a countdown timer overlay (10 to 1) displayed on top of the live camera view in CameraView.tsx. When the gift box is opened and the camera view appears, automatically start the countdown. Display the current countdown number prominently centered over the camera feed (large, bold, visually dramatic styling consistent with the pink dreamy theme). Each second, decrement the count until it reaches 1, then 'GO' or a burst effect, and after the countdown completes, automatically navigate to a new Poem page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Timer for \"Secret Surprise\" countdown  10 to 1. In live camera time show this timer then automatically Open a new page."
+        ]
+      },
+      "acceptanceCriteria": [
+        "When CameraView is active, a countdown from 10 to 1 is visible overlaid on the camera feed.",
+        "The countdown numbers are large and centered, styled in the existing pink dreamy theme.",
+        "The countdown decrements by 1 every second.",
+        "After the countdown reaches 1 and completes, the app automatically navigates to the Poem page without any user interaction."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a new PoemPage component (frontend/src/pages/PoemPage.tsx) that displays the following Bengali poem inside a styled decorative box. The box should have a soft pink/golden border, rounded corners, a semi-transparent background, and subtle glow or shadow consistent with the app's dreamy aesthetic. Center the box on the page with the poem text rendered in an elegant font (Dancing Script or similar already in the project). The poem text to display exactly as provided:\n\nখুশি মানে ভোরের আলো\nখুশি মানে ভালো থাকা\n\nহৃদয় জুড়ে থাকুক তোমার\nআনন্দতেই ছবি আঁকা\n\nতোমার হাসির মিষ্টি রোদে\nমুছবে মনের সব কালো\n\nনামের মতোই থেকো তুমি\nসব সময় ভীষণ ভালো",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "automatically Open a new page. Then show this in a Box."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new PoemPage component exists and is registered in App.tsx navigation.",
+        "The Bengali poem is displayed in full, line by line, inside a decorated box.",
+        "The box uses the existing pink dreamy theme (rounded corners, glow/shadow, semi-transparent background).",
+        "The poem is rendered using an elegant font already available in the project.",
+        "The page has a matching background consistent with the rest of the app's aesthetic.",
+        "The page is navigated to automatically after the countdown ends."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Update App.tsx to include the new 'poem' view state and pass the appropriate navigation callback from CameraView so that after the countdown completes, the app transitions to PoemPage. Ensure the existing HomePage → gift open → CameraView flow is preserved and the new PoemPage is appended at the end of this flow.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "then automatically Open a new page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "App.tsx includes a 'poem' view state that renders PoemPage.",
+        "CameraView receives an onCountdownComplete callback prop that triggers navigation to PoemPage.",
+        "The existing HomePage and CameraView flow is not broken.",
+        "Navigating directly to the poem page without going through the countdown is not possible via normal UI flow."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ (immutable paths).",
+    "Do not modify frontend/src/components/ui/ (immutable paths).",
+    "Do not modify frontend/src/main.tsx (immutable path).",
+    "Preserve all existing emoji rain, floating messages, and camera snapshot features in CameraView.tsx.",
+    "The Bengali poem text must be displayed exactly as provided, with no translation or alteration."
+  ],
+  "nonGoals": [
+    "No backend changes required; all logic is purely frontend.",
+    "No audio or sound effects for the countdown unless already in the project.",
+    "No user-controllable settings for the countdown duration.",
+    "No admin panel changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

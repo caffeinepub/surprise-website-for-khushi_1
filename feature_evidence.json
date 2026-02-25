@@ -1,0 +1,63 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-countdown-timer-overlay-10-to-1-displayed-on-top-of-the-live-camera-view-in-cameraview-tsx-when-the-gift-box-is-opened-and-the-camera-view-appears-automatically-start-the-countdown-display-the-current-countdown-number-prominently-centered-over-the-camera-feed-large-bold-visually-dramatic-styling-consistent-with-the-pink-dreamy-theme-each-second-decrement-the-count-until-it-reaches-1-then-go-or-a-burst-effect-and-after-the-countdown-completes-automatically-navigate-to-a-new-poem-page",
+      "featureTitle": "Add a countdown timer overlay (10 to 1) displayed on top of the live camera view in CameraView.tsx. When the gift box is opened and the camera view appears, automatically start the countdown. Display the current countdown number prominently centered over the camera feed (large, bold, visually dramatic styling consistent with the pink dreamy theme). Each second, decrement the count until it reaches 1, then 'GO' or a burst effect, and after the countdown completes, automatically navigate to a new Poem page.",
+      "files": [
+        "frontend/src/components/CameraView.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "camera@1.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-new-poempage-component-frontend-src-pages-poempage-tsx-that-displays-the-following-bengali-poem-inside-a-styled-decorative-box-the-box-should-have-a-soft-pink-golden-border-rounded-corners-a-semi-transparent-background-and-subtle-glow-or-shadow-consistent-with-the-app-s-dreamy-aesthetic-center-the-box-on-the-page-with-the-poem-text-rendered-in-an-elegant-font-dancing-script-or-similar-already-in-the-project-the-poem-text-to-display-exactly-as-provided",
+      "featureTitle": "Create a new PoemPage component (frontend/src/pages/PoemPage.tsx) that displays the following Bengali poem inside a styled decorative box. The box should have a soft pink/golden border, rounded corners, a semi-transparent background, and subtle glow or shadow consistent with the app's dreamy aesthetic. Center the box on the page with the poem text rendered in an elegant font (Dancing Script or similar already in the project). The poem text to display exactly as provided:\n\nখুশি মানে ভোরের আলো\nখুশি মানে ভালো থাকা\n\nহৃদয় জুড়ে থাকুক তোমার\nআনন্দতেই ছবি আঁকা\n\nতোমার হাসির মিষ্টি রোদে\nমুছবে মনের সব কালো\n\nনামের মতোই থেকো তুমি\nসব সময় ভীষণ ভালো",
+      "files": [
+        "frontend/src/pages/PoemPage.tsx"
+      ],
+      "components": [
+        "camera@1.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-app-tsx-to-include-the-new-poem-view-state-and-pass-the-appropriate-navigation-callback-from-cameraview-so-that-after-the-countdown-completes-the-app-transitions-to-poempage-ensure-the-existing-homepage-gift-open-cameraview-flow-is-preserved-and-the-new-poempage-is-appended-at-the-end-of-this-flow",
+      "featureTitle": "Update App.tsx to include the new 'poem' view state and pass the appropriate navigation callback from CameraView so that after the countdown completes, the app transitions to PoemPage. Ensure the existing HomePage → gift open → CameraView flow is preserved and the new PoemPage is appended at the end of this flow.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "camera@1.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

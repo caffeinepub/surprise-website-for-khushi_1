@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report listing implemented features (countdown timer overlay, PoemPage component, App.tsx navigation update) with associated files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "JSON map of frontend source files to short human-readable summaries describing each file's purpose and key functionality.",
+  "frontend/index.css": "Global CSS entry point that imports Tailwind base/components/utilities and defines CSS custom properties for light and dark theme color tokens.",
+  "frontend/index.html": "HTML shell for the React app titled 'Surprise Website for Khushi' that mounts the app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component managing navigation between 'home', 'admin', and 'poem' views, passing callbacks to child pages to trigger view transitions.",
+  "frontend/src/components/CameraView.tsx": "Full-screen camera component that captures rolling snapshots to LocalStorage, displays floating compliment messages and emoji rain, and runs a 10-to-1 countdown overlay that calls onCountdownComplete when finished.",
+  "frontend/src/components/EmojiRain.tsx": "Full-screen fixed overlay that continuously spawns animated falling emoji particles at randomized positions, sizes, speeds, and opacities using a setInterval-driven particle system.",
+  "frontend/src/components/GiftBox.tsx": "Animated SVG gift box component with floating, shake, and open animations, plus a particle burst effect on click, styled in pink with a bow and ribbon.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor via React Query, using the current Internet Identity and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication using DFINITY's AuthClient, exposing login/logout functions and status flags. Includes an InternetIdentityProvider component that persists identity across page reloads.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder module indicating no backend queries are needed since all data is stored in LocalStorage.",
+  "frontend/src/index.css": "Global stylesheet that imports Google Fonts, sets up Tailwind directives, defines a pink-themed CSS variable palette, and declares custom keyframe animations for gift box, emoji rain, glowing text, and other UI effects.",
+  "frontend/src/main.tsx": "Application entry point that renders the React app wrapped with QueryClientProvider and InternetIdentityProvider into the root DOM element.",
+  "frontend/src/pages/AdminPanel.tsx": "Admin panel page with a login form (hardcoded credentials) that displays, downloads, and clears camera snapshots stored in LocalStorage using a circular buffer.",
+  "frontend/src/pages/HomePage.tsx": "Home page featuring a glowing 'Khushi' heading, an animated gift box that transitions to a camera view on click, a snapshot flash effect, and an admin panel shortcut button.",
+  "frontend/src/pages/PoemPage.tsx": "Full-screen poem display page with a dark pink gradient background, animated fade-in poem card showing Bengali verses, decorative blobs, and an active emoji rain overlay.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration for the frontend, extending the theme with custom fonts (Dancing Script, Pacifico, Quicksand), oklch-based color tokens (including a custom pink scale and sidebar/chart colors), border radii, box shadows, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Tracks the current project state (version 3), documenting existing features (countdown timer overlay on camera view, Bengali PoemPage component, App.tsx routing update) and pending new feature requests for a 'Secret Surprise' flow."
+}

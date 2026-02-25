@@ -1,0 +1,12 @@
+{
+  "frontend/src/index.css": "Global pink dreamy design system with all existing animations plus a new countdownPop keyframe animation for the dramatic scale-bounce entrance of each countdown number.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom pink color palette, Dancing Script/Pacifico/Quicksand font families, pink shadow utilities, and additional keyframe animations for gift float and ping effects.",
+  "frontend/src/App.tsx": "Root app component managing view state between 'home', 'admin', and 'poem' views, passing onCountdownComplete callback to HomePage to trigger navigation to PoemPage.",
+  "frontend/src/pages/HomePage.tsx": "Main home page accepting onCountdownComplete prop and forwarding it to CameraView, preserving all existing gift box, heading, and admin navigation functionality.",
+  "frontend/src/components/GiftBox.tsx": "Animated 3D SVG gift box with floating animation, shake/open effects, particle burst on click, and pink bow/ribbon design.",
+  "frontend/src/components/EmojiRain.tsx": "Full-screen fixed emoji rain overlay that continuously spawns emojis (✨🌟🌺💐💞🩷🐱🌀🌸🌈🌷❤️) with randomized size (1.2–3rem), opacity (0.6–1.0), speed (3–8s), and horizontal position across the entire viewport using position:fixed 100vw×100vh at z-index 35.",
+  "frontend/src/components/CameraView.tsx": "Full-screen camera view with all existing features (emoji rain, floating messages, snapshots) plus a new countdown timer overlay (10→1) centered on the camera circle that auto-calls onCountdownComplete after reaching 1.",
+  "frontend/src/pages/AdminPanel.tsx": "Admin panel with login form (admin@123/admin@123), snapshot gallery grid loaded from LocalStorage rolling buffer, lightbox preview, download, clear-all, and refresh functionality. Fixed missing `X` icon import from `lucide-react`.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file — no backend queries needed since all data is stored in LocalStorage.",
+  "frontend/src/pages/PoemPage.tsx": "New poem reveal page with dark dreamy background, emoji rain, and a decorated glowing box displaying the full Bengali poem with staggered line fade-in animations and ornamental dividers."
+}

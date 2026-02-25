@@ -1,0 +1,65 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add Secret Surprise countdown timer with poem reveal page",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add countdown timer overlay (10 to 1) on camera view that auto-navigates to poem page",
+      "acceptanceCriteria": [
+        "When CameraView is active, a countdown from 10 to 1 is visible overlaid on the camera feed.",
+        "The countdown numbers are large and centered, styled in the existing pink dreamy theme.",
+        "The countdown decrements by 1 every second.",
+        "After the countdown reaches 1 and completes, the app automatically navigates to the Poem page without any user interaction."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CameraView.tsx",
+          "operation": "modify",
+          "description": "Add countdown timer state and effect that starts automatically when the component mounts. Display countdown numbers (10 to 1) overlaid centered on the camera feed using large, bold text styled with the pink dreamy theme (using CSS variables from index.css). After countdown completes, invoke the onCountdownComplete callback prop to trigger navigation. Preserve all existing emoji rain, floating messages, and camera snapshot features."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add a keyframe animation for the countdown timer (e.g., scale pulse or fade effect) to make each number transition visually dramatic and consistent with the existing animations like glow and float."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create PoemPage component displaying Bengali poem in decorated box",
+      "acceptanceCriteria": [
+        "A new PoemPage component exists and is registered in App.tsx navigation.",
+        "The Bengali poem is displayed in full, line by line, inside a decorated box.",
+        "The box uses the existing pink dreamy theme (rounded corners, glow/shadow, semi-transparent background).",
+        "The poem is rendered using an elegant font already available in the project.",
+        "The page has a matching background consistent with the rest of the app's aesthetic.",
+        "The page is navigated to automatically after the countdown ends."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PoemPage.tsx",
+          "operation": "create",
+          "description": "Create a new PoemPage component that displays the Bengali poem text exactly as provided in the BuildRequest. Render the poem inside a styled decorative box with soft pink/golden border, rounded corners, semi-transparent background, and subtle glow or shadow using the existing CSS variables from index.css. Center the box on the page. Use the Dancing Script font (already available via Google Fonts import in index.css) for the poem text. Apply a matching dreamy background consistent with HomePage aesthetic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Wire PoemPage into App navigation and connect countdown completion callback",
+      "acceptanceCriteria": [
+        "App.tsx includes a 'poem' view state that renders PoemPage.",
+        "CameraView receives an onCountdownComplete callback prop that triggers navigation to PoemPage.",
+        "The existing HomePage and CameraView flow is not broken.",
+        "Navigating directly to the poem page without going through the countdown is not possible via normal UI flow."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a 'poem' view state to the existing view state management. Update the view rendering logic to display PoemPage when view is 'poem'. Pass an onCountdownComplete callback to CameraView (when rendered from HomePage flow) that sets the view to 'poem'. Preserve the existing HomePage and AdminPanel navigation flow."
+        }
+      ]
+    }
+  ]
+}
